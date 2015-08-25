@@ -1,0 +1,19 @@
+<div style="float: left">
+  <h1>Index - Listagem</h1>
+</div>
+
+<div style="float: right">
+  <%= link_to 'Create products', create_products_path, method: :post %>
+  <%= link_to 'Delete products', destroy_products_path, method: :delete %>
+</div>
+
+<div style="clear: both"></div>
+<br /><br />
+Total: <%= @products.count %>
+
+<ul>
+  <% @products.each do |product| %>
+    <% title = "#{product.name} - #{product.price}" %>
+    <li><%= link_to title, product_path(product.id) %></li>
+  <% end %>
+</ul>

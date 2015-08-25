@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+Product.delete_all
+(1..300).each do |i|
+  Product.create({ name: "product_#{i}", price: i * 100 })
+end

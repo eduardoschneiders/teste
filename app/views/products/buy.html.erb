@@ -1,0 +1,12 @@
+<h1>Buy product</h1>
+<h3>Congratulations! you bought the <%= @product.name %></h3>
+<%= link_to 'Product list', products_path %>
+
+
+
+<br /><br />
+Total <%= @total %><br />
+
+<% (1..@total).each do |t| %>
+  <%= '.' %>
+<% end %>

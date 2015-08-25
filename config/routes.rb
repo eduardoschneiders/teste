@@ -6,7 +6,11 @@ Teste::Application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get 'products/' => 'products#index'
+  get 'products/:id' => 'products#view', as: :product
+  get 'products/:id/buy' => 'products#buy', as: :buy_product
+  post 'product/create' => 'products#create', as: :create_products
+  delete 'product/delete_all' => 'products#destroy', as: :destroy_products
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

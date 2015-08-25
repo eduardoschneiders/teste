@@ -1,0 +1,15 @@
+<h1>view - product details </h1>
+
+<table>
+  <tr>
+    <td>Title:</td>
+    <td><%= @product.name %></td>
+  </tr>
+  <tr>
+    <td>Price:</td>
+    <td><%= number_to_currency @product.price %></td>
+  </tr>
+</table>
+
+<%= link_to 'Back', products_path, { style: 'float: left; ' } %>
+<%= link_to 'Buy product', buy_product_path(@product.id), { style: 'float: left; color: blue; font-size: 25px; margin-left: 50px;' }%>
